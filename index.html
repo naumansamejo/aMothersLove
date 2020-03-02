@@ -324,7 +324,7 @@ form button:hover{
                 <div class="console" id="console1">
 
                     <i></i>
-                    <span class="typer" data-delim="|" id="main" data-loop="1" data-words="Welcome to A Mother's Love       <i></i>New Things Coming Soon<i></i><i></i>Join our newsletter to stay updated!!!<i></i>" data-delay="80" ></span>
+                    <span class="typer" data-delim="|" id="main" data-loop="1" data-words="Welcome to A Mother's Love       <i></i>New Things Coming Soon<i></i><i></i>Wanna send us email? (y/n)" data-delay="80" ></span>
                     <span class="cursor" data-owner="main"></span>
                     
 
@@ -344,11 +344,11 @@ form button:hover{
     
 
     <!-- Message box -->
-    <!-- <div class="terminal-main" data-hidden id="send-msg" style="transform:translate3d(100px, 100px,0);width: 470px;height:350px;" >
+    <div class="terminal-main" data-hidden id="send-msg" style="transform:translate3d(100px, 100px,0);width: 470px;height:350px;" >
         <div class="terminal-window">
             
             <header>
-                <span>marcus@amotherslove.com</span>
+                <span>email@yourdomain.com</span>
             </header>
     
             
@@ -387,7 +387,7 @@ form button:hover{
 
     </div>
 
-     -->
+    
     
 
 
@@ -540,26 +540,26 @@ TyperSetup();
 
 
 
-// noTyped = true;
-// document.addEventListener("keyup", function(e){
+noTyped = true;
+document.addEventListener("keyup", function(e){
     
-//     if(document.getElementById("main-terminal").classList.contains("l-1") && !t.main.typing && noTyped ){
+    if(document.getElementById("main-terminal").classList.contains("l-1") && !t.main.typing && noTyped ){
         
-//         if(e.keyCode == 89){
-//             // yes
-//             document.getElementById("send-msg").removeAttribute("data-hidden");
-//             windowOrder.call(document.getElementById("send-msg"));
+        if(e.keyCode == 89){
+            // yes
+            document.getElementById("send-msg").removeAttribute("data-hidden");
+            windowOrder.call(document.getElementById("send-msg"));
 
-//         }else if(e.keyCode == 78){
-//             // no
-//         }
+        }else if(e.keyCode == 78){
+            // no
+        }
 
-//         document.querySelector("#main-terminal .typer").innerHTML += "<i></i>";
+        document.querySelector("#main-terminal .typer").innerHTML += "<i></i>";
         
-//         noTyped = false;
-//     }
+        noTyped = false;
+    }
 
-// });
+});
 
 
 
